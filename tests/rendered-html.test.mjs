@@ -58,7 +58,7 @@ test("includes production metadata, accessibility, and deployment wiring", async
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.match(css, /:focus-visible/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
-  assert.match(workflow, /actions\/deploy-pages@v4/);
+  assert.match(workflow, /actions\/deploy-pages@v5/);
   assert.match(nextConfig, /output: isGitHubPages \? "export"/);
 
   await access(new URL("../public/og.png", import.meta.url));
